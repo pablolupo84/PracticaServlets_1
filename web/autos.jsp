@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Practica JSP + Servlet!!</h1>
+        <h2>Cargar AUtos</h2>
         <form action="SvAutos" method="POST">
             <p><label>PLACA:<label><input type="text" name="placa"></p>
             <p><label>MARCA:<label><input type="text" name="marca"></p>
@@ -21,5 +22,10 @@
             <p><label>TIPO MOTOR:<label><input type="text" name="tipoMotor"></p>   
             <button type="submit">Enviar</button>   
         </form>
+        <br>
+        <h2>Listado de AUtos</h2>
+        <form action="SvAutos" method="GET">   
+            <button type="submit">VER AUTOS</button>   
+        </form>   
     </body>
 </html>
