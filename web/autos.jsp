@@ -9,9 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Autos JSP</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Practica JSP + Servlet!!</h1>
+        <form action="SvAutos" method="POST">
+            <p><label>PLACA:<label><input type="text" name="placa"></p>
+            <p><label>MARCA:<label><input type="text" name="marca"></p>
+            <p><label>MODELO:<label><input type="text" name="modelo"></p>
+            <p><label>COLOR:<label><input type="text" name="color"></p>
+            <p><label>TIPO MOTOR:<label><input type="text" name="tipoMotor"></p>   
+            <button type="submit">Enviar</button>   
+        </form>
     </body>
 </html>
