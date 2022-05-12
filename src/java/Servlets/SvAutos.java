@@ -63,9 +63,15 @@ public class SvAutos extends HttpServlet {
         //processRequest(request, response);
         //System.out.println("doGet");
         HttpSession misession=request.getSession();
-        misession.setAttribute("listaDeAutos",listaAutos);
         
-        response.sendRedirect("mostrarAutos.jsp");
+        misession.setAttribute("listaAutos",listaAutos);
+        
+        //for(Autos unAuto : listaAutos){
+            //unAuto.mostrarAuto();
+        //}
+        //System.out.println(listaAutos.size());
+        
+        response.sendRedirect("mostrarAuto.jsp");
     }
 
     /**

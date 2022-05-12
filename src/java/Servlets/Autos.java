@@ -23,6 +23,10 @@ public class Autos {
         this.tipoMotor=tipoMotor;
     };
     
+    public Autos(){
+        
+    };
+    
     public String getPatente(){
         return this.patente;
     }
