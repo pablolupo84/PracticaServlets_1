@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -17,7 +19,8 @@ import java.io.PrintWriter;
  * @author srcoco
  */
 public class SvAutos extends HttpServlet {
-
+    List<Autos> listaAutos = new ArrayList<> ();
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -70,9 +73,24 @@ public class SvAutos extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            
             throws ServletException, IOException {
         //processRequest(request, response);
-        System.out.println("doPost");
+        //System.out.println(request.getParameter("placa"));
+        
+        
+        listaAutos.add(new Autos(request.getParameter("placa"),
+                                request.getParameter("marca"),
+                                request.getParameter("modelo"),
+                                request.getParameter("color"),
+                                request.getParameter("tipoMotor"))
+                );
+        
+        for(Autos unAuto : listaAutos){
+            unAuto.mostrarAuto();
+        }
+        System.out.println(listaAutos.size());
+        
     }
 
     /**

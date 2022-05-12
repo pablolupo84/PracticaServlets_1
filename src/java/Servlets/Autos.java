@@ -43,4 +43,12 @@ public class Autos {
         return this.tipoMotor;
     }
     
+    public void mostrarAuto(){
+        System.out.println("Patente: " + this.patente);
+        System.out.println("Marca: " + this.marca);
+        System.out.println("Color: " + this.color);
+        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Tipo Motor: " + this.tipoMotor);
+    }
+    
 }
